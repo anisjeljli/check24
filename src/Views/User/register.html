@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title >Register User</title>
+</head>
+<body>
+<form action="register_user.php" method="post" onsubmit="return validatePassword()">
+    <div class="container">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="fullName"><b>Full Name</b></label>
+        <input type="text" placeholder="Full Name" name="fullName" id="fullName" required>
+
+        <label for="userName"><b>Full Name</b></label>
+        <input type="text" placeholder="User Name" name="userName" id="userName" required>
+
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+        <label for="confirm_password"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="confirm_password" id="confirm_password" required>
+        <hr>
+
+        <button type="submit" class="registerbtn">Register</button>
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a href="#">Sign in</a>.</p>
+    </div>
+</form>
+
+<script type="javascript">
+
+    var password = document.getElementById("password")
+        , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+        if(password.value !== confirm_password.value) {
+            return false;
+        } else {
+           return true;
+        }
+    }
+
+
+</script>
+</body>
+
+
+</html>
